@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <title>Counter</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <p id="number">0</p>
+            <div id="button-wrapper">
+                <!-- Adding a button - ID is used for js script, on click references fundtion -->
+                <!-- <input type="button" value="+" id="addition" onclick="add()" /> -->
+                <input type="button" value="+1" id="additionone" onclick="add(1)" />
+                <input type="button" value="+10" id="additionten" onclick="add(10)" />
+                <input type="button" value="-10" id="subtractionten" onclick="subtract(10)" />
+                <input type="button" value="-1" id="subtractionone" onclick="subtract(1)" />
+                <input type="button" value="Reset" id="reset" onclick="reset()" />
+                <!-- User inputs a number instead of using a button -->
+                <input type="number" id="number-input" />
+                <div id="button-wrapper">
+                    <input type="button" value="-" id="subtraction" onclick="subtract(document.getElementById('number-input').value)" />
+                    <input type="button" value="+" id="addition" onclick="add(document.getElementById('number-input').value)" />
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- Linking HTML file to javascript file -->
+    <script src="script.js"></script>
+</html>
